@@ -4,17 +4,17 @@ import numpy as np
 #import time
 
 # Optimization class
-class Pros:
+class Agent:
     def __init__(self, a, b, Pmin, Pmax, n, o):    
         self.Pmin = Pmin
         self.Pmax = Pmax
         self.b = b
         self.a = a
         self.sigma = np.array(o,dtype=np.float64)
-        self.weight = 1/n
+#        self.weight = 1/n
         self.p_old = 0.0
-        self.price = np.array(0.0,dtype=np.float64)
-        self.residual = np.array(1.0,dtype=np.float64)
+        self.price = 0.0
+        self.residual = 1.0
         self.buf_size = 10
         self.buf_m = np.ones((n+1,self.buf_size),dtype=np.float64)
         self.buf_p = np.ones((self.buf_size,3),dtype=np.float64)

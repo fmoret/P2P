@@ -8,7 +8,7 @@ Created on Thu Apr 20 09:18:07 2017
 import numpy as np
 #import time
 
-class Master:
+class Central:
     def __init__(self, n, o):
         self.num_pros = n
         self.sigma = np.array(o,dtype=np.float64)
